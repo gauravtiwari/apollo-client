@@ -393,6 +393,9 @@ export default class ApolloClient {
     return this.queryManager.mutate(options);
   };
 
+  /**
+   * Returns a reducer function configured according to the `reducerConfig` instance variable.
+   */
   public reducer(): Function {
     return createApolloReducer(this.reducerConfig);
   }
